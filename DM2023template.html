@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Marathon 2024</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> <!-- Plain Font for Info -->
+
+    <!-- Font Awesome Icons :) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script>
+        // Countdown Timer
+        function startCountdown() {
+            const eventDate = new Date("2024-12-31T00:00:00").getTime(); // Set your event date here
+
+            // Update the countdown every 1 second
+            const timer = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = eventDate - now;
+
+                // Calculate time components
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the HTML element with id "countdown"
+                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+                // If the countdown is finished, display a message
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.getElementById("countdown").innerHTML = "The event has started!";
+                }
+            }, 1000);
+        }
+
+        // Start the countdown when the page loads
+        window.onload = startCountdown;
+    </script>
+</head>
+<body style="font-family: 'Roboto', sans-serif; background-color: #FFD4F4; margin: 0; padding: 0; color: #333;">
+
+    <!-- Header Section -->
+    <header style="text-align: center; background-color: #F9EC6C; padding: 40px 0;">
+        <div style="padding: 20px; display: inline-block; border-radius: 10px;">
+            <!-- Larger Logo -->
+            <img src="dmlogo.png" alt="Dance Marathon Logo" style="max-width: 350px; border-radius: 10px;">
+        </div>
+        <h1 style="font-family: 'Pacifico', cursive; font-size: 3.5rem; color: #FF8A6F; margin: 20px 0;">
+            Dance Marathon at Cypress Bay 2023
+        </h1>
+        <p style="font-family: 'Pacifico', cursive; font-size: 2.5rem; color: #FF8A6F; margin: 20px 0;">
+            all smiles for the kids    
+        </header>
+
+    <!-- Image Section -->
+    <section style="display: flex; justify-content: center; gap: 20px; margin-top: 30px;">
+        <img src="image1.png" alt="Event Image 1" style="width: 30%; max-height: 300px; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+        <img src="image2.png" alt="Event Image 2" style="width: 30%; max-height: 300px; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+        <img src="image3.png" alt="Event Image 3" style="width: 30%; max-height: 300px; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);">
+    </section>
+
+    <!-- Countdown Timer Section -->
+    <section class="countdown" style="text-align: center; margin-top: 50px;">
+        <h2 style="font-family: 'Pacifico', cursive; color: #FF8A6F; font-size: 2.5rem;">
+            Countdown to the Event
+        </h2>
+        <div id="countdown" style="font-size: 2rem; color: #FF8A6F; font-weight: bold;"></div>
+    </section>
+
+    <!-- Details Section -->
+    <section style="padding: 40px 20px; background-color: #FCCC00; text-align: center;">
+        <h2 style="font-family: 'Pacifico', cursive; color: #AEFDFF; font-size: 2.5rem; margin-bottom: 20px;">
+            What is Dance Marathon at Cypress Bay High?
+        </h2>
+        <p style="font-family: 'Open Sans', sans-serif; font-size: 1.2rem; color: #333;">Miracle Network Dance Marathon is a program of Children's Miracle Network Hospitals and raises funds for 170 children's hospitals. 
+Donations benefit local member hospitals to fund life-saving treatments, healthcare services, research, pediatric medical equipment, child life services, and financial assistance for families.
+CBHS DM runs through Nicklaus Children's Hospital which relies on your donations to support the health of future generations.</p>
+    </section>
+
+    <!-- Donate Now Section -->
+    <section style="padding: 40px 20px; text-align: center;">
+        <h2 style="font-family: 'Pacifico', cursive; color: #FF8A6F; font-size: 2.5rem; margin-bottom: 20px;">
+            Donate Now
+        </h2>
+        <a href="https://events.dancemarathon.com/index.cfm?fuseaction=donorDrive.participant&participantID=1179260&language=en&referrer=mf%3A1179260%3Ayou-page" target="_blank">
+            <button style="background-color: #FF8A6F; color: white; padding: 15px 30px; font-size: 1.2rem; border: none; border-radius: 5px;">
+                Donate Now
+            </button>
+        </a>
+    </section>
+
+    <!-- Contact Section with Social Media Icons -->
+    <section style="text-align: center; padding: 40px 20px; background-color: #AEFDFF;">
+        <h2 style="font-family: 'Pacifico', cursive; color: #FF8A6F; font-size: 2.5rem; margin-bottom: 20px;">
+            Connect with Us!
+        </h2>
+        <p style="font-family: 'Open Sans', sans-serif; font-size: 1.2rem; color: #333;">Follow us on social media to stay updated on all the exciting news!</p>
+        <div style="font-size: 2rem;">
+            <a href="https://www.tiktok.com/@cbhsdm" style="color: #FF8A6F; text-decoration: none; margin-right: 20px;" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/cbhsdm/" style="color: #FF8A6F; text-decoration: none;" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer style="background-color: #F9EC6C; padding: 20px; text-align: center;">
+        <p style="font-size: 1rem; color: #333;">&copy; 2024 Dance Marathon. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
